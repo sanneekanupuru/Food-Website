@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 
+html {
+    scroll-behavior: smooth;
+}
+
 h1 {
     color: #d0b200;
     height: fit-content;
@@ -45,8 +49,9 @@ h1 {
 }
 
 .banner-container {
-    width: 1200px;
+    max-width: 1200px;
     margin: 0 auto;
+    padding: 0 20px;
 }
 
 .banner-heading {
@@ -314,6 +319,63 @@ h1 {
     font-size: 14px;
     margin-top: 10px;
 }
+
+
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: white;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        padding: 10px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        z-index: 1000;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    header {
+        position: relative;
+    }
+}
+
+@media (max-width: 768px) {
+    .feature-cards-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .menu-items {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .delivery-payment-row {
+        flex-direction: column;
+    }
+
+    .delivery-payment-column-left,
+    .delivery-payment-column-right {
+        text-align: center;
+    }
+
+    .delivery-payment-column-right {
+        padding-top: 20px;
+    }
+}
+
+
 
 
 
